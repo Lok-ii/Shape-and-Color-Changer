@@ -1,0 +1,78 @@
+body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url(./codioful-formerly-gradienta-LeG68PrXA6Y-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 25px 2px white;
+}
+
+.triangle{
+    width: 0px;
+    height: 0px;
+    border-top: 200px solid transparent;
+    border-left: 200px solid coral;
+    box-shadow: -3px 3px 3px 0px coral;
+}
+
+.innerCircle{
+    width: 200px;
+    height: 200px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px greenyellow;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: darkorange;
+    box-shadow: 0 0 15px 2px darkorange;
+}
+
+.rectangle{
+    width: 200px;
+    height: 130px;
+    background-color: blueviolet;
+    box-shadow: 0 0 25px 2px blueviolet;
+}
+
+button{
+    padding: 1rem;
+    border-radius: 0.3rem;
+    border: 2px solid #185CE6;
+    box-shadow: 0 0 5px 0px black;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.15s ease-in-out;
+    color: #185CE6;
+    font-weight: 700;
+}
+
+button:hover{
+    transform: scale(1.05);
+    color: white;
+    background-color: #185CE6;
+}
+
+.hidden{
+    display: none;
+}
