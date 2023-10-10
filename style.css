@@ -25,32 +25,32 @@ body{
     box-shadow: 0 0 25px 2px white;
 }
 
-.triangle{
+#triangle{
     width: 0px;
     height: 0px;
-    border-top: 200px solid transparent;
-    border-left: 200px solid coral;
+    border-top: 150px solid transparent;
+    border-left: 150px solid coral;
     box-shadow: -3px 3px 3px 0px coral;
 }
 
-.innerCircle{
-    width: 200px;
-    height: 200px;
+#innerCircle{
+    width: 150px;
+    height: 150px;
     background-color: greenyellow;
     border-radius: 50%;
     box-shadow: 0 0 5px 2px greenyellow;
 }
 
-.square{
-    width: 200px;
-    height: 200px;
+#square{
+    width: 150px;
+    height: 150px;
     background-color: darkorange;
     box-shadow: 0 0 15px 2px darkorange;
 }
 
-.rectangle{
-    width: 200px;
-    height: 130px;
+#rectangle{
+    width: 150px;
+    height: 100px;
     background-color: blueviolet;
     box-shadow: 0 0 25px 2px blueviolet;
 }
@@ -73,6 +73,190 @@ button:hover{
     background-color: #185CE6;
 }
 
-.hidden{
-    display: none;
+.shape{
+    transition: all 0.2s ease-in-out;
 }
+
+#star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: #FF4500;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #FF4500;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+  }
+  #star-five:before {
+    border-bottom: 80px solid #FF4500;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+  }
+  #star-five:after {
+    position: absolute;
+    display: block;
+    color: #FF4500;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #FF4500;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 160px;
+  }
+  #heart:before,
+  #heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 10px;
+    width: 100px;
+    height: 160px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  #heart:after {
+    left: -50px;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+    
+  #diamond {
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-bottom-color: #1F2D1D;
+    position: relative;
+    top: -80px;
+  }
+  #diamond:after {
+    content: '';
+    position: absolute;
+    left: -80px;
+    top: 80px;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top-color: #1F2D1D;
+  }
+
+  #pacman {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid #FFD700;
+    border-left: 60px solid #FFD700;
+    border-bottom: 60px solid #FFD700;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  
+  #burst-12 {
+    background: #2C3E50;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+  }
+  #burst-12:before,
+  #burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    background: #2C3E50;
+  }
+  #burst-12:before {
+    transform: rotate(30deg);
+  }
+  #burst-12:after {
+    transform: rotate(60deg);
+  }
+
+  #yin-yang {
+    width: 120px;
+    box-sizing: content-box;
+    height: 70px;
+    background: #eee;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: relative;
+}
+  #yin-yang:before {
+    content: "";
+    position: absolute;
+    top: 49%;
+    left: 0;
+    background: #eee;
+    border: 18px solid black;
+    border-radius: 100%;
+    width: 26px;
+    height: 26px;
+    box-sizing: content-box;
+  }
+  #yin-yang:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    background: black;
+    border: 18px solid #eee;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    box-sizing: content-box;
+  }
+
+  
+  #cone {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 150px solid sienna;
+    border-radius: 50%;
+  }
+
+  
+  #cross {
+    background: red;
+    height: 120px;
+    position: relative;
+    width: 30px;
+  }
+  #cross:after {
+    background: red;
+    content: "";
+    height: 30px;
+    left: -45px;
+    position: absolute;
+    top: 45px;
+    width: 120px;
+  }

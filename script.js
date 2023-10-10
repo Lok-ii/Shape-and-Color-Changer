@@ -34,47 +34,21 @@ let colors = [
 let colorButton = document.querySelector(".color");
 let circle = document.querySelector(".circle");
 
+let audio = new Audio("./mixkit-plastic-bubble-click-1124.wav");
+
 colorButton.addEventListener("click", (event) => {
+  audio.play();
   let color = Math.round(Math.random() * 30);
   circle.style.backgroundColor = colors[color];
 });
 
-let shapes = [];
-
-let innerCircle = document.querySelector(".innerCircle");
-shapes.push(innerCircle);
-let square = document.querySelector(".square");
-shapes.push(square);
-let rectangle = document.querySelector(".rectangle");
-shapes.push(rectangle);
-let triangle = document.querySelector(".triangle");
-shapes.push(triangle);
-
+let shapes = ["innerCircle", "square", "rectangle", "triangle", "heart", "star-five", "cross", "yin-yang", "burst-12", "pacman", "diamond", "cone"];
+let inner = document.querySelector("#inner");
 
 let shapeButton = document.querySelector(".shapeButton");
 
-shapeButton.addEventListener("click", ()=> {
-    let innerShape = Math.round(Math.random() * 3);
-    if(shapes[innerShape] == triangle){
-        triangle.classList.remove("hidden");
-        square.classList.add("hidden");
-        rectangle.classList.add("hidden");
-        innerCircle.classList.add("hidden");
-    }else if(shapes[innerShape] == square){
-        triangle.classList.add("hidden");
-        rectangle.classList.add("hidden");
-        innerCircle.classList.add("hidden");
-        square.classList.remove("hidden");
-    }else if(shapes[innerShape] == rectangle){
-        triangle.classList.add("hidden");
-        square.classList.add("hidden");
-        innerCircle.classList.add("hidden");        
-        rectangle.classList.remove("hidden");
-    }else if(shapes[innerShape] == innerCircle){
-        triangle.classList.add("hidden");
-        square.classList.add("hidden");
-        rectangle.classList.add("hidden");       
-        innerCircle.classList.remove("hidden");
-    }
+shapeButton.addEventListener("click", () => {
+  audio.play();
+  let innerShape = Math.floor(Math.random() * shapes.length);
+  inner.id = shapes[innerShape];
 });
-

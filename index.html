@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Change Shape and Color</title>
-</head>
-<body>
-    <div class="circle">
-        <div class="shape triangle hidden"></div>
-        <div class="shape square hidden"></div>
-        <div class="shape innerCircle hidden"></div>
-        <div class="shape rectangle hidden"></div>
+  </head>
+  <body>
+    <div class="circle animate__fadeIn">
+      <div class="shape animate__fadeIn" id="inner"></div>
     </div>
 
     <button class="color">Change Color</button>
     <button class="shapeButton">Change Shape</button>
-    
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
